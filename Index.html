@@ -156,10 +156,10 @@
       </ul>
     </div>
 
-    <!-- Right Form Section -->
+   <!-- Right Form Section -->
 <div class="bg-white p-8 rounded-lg shadow-lg">
-  <form id="audit-form" name="submit-to-google-sheet">
-
+  <form id="audit-form" name="contact" method="POST" data-netlify="true">
+    
     <div class="mb-4">
       <label class="block text-gray-700 placeholder-gray-400 text-sm font-medium mb-1">Full Name</label>
       <input type="text" name="Full Name" required placeholder="Your name" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -185,10 +185,10 @@
       <input type="text" name="Message" required placeholder="D2C / B2B / Services" class="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
 
-    <!-- Hidden timestamp -->
-    <input type="hidden" name="Timestamp" id="timestamp">
+    <!-- Hidden Input to Activate Netlify Forms -->
+    <input type="hidden" name="form-name" value="contact">
 
-    <!-- Submit Button with animation -->
+    <!-- Submit Button -->
     <button type="submit" class="w-full bg-black text-white py-2 px-4 rounded hover:bg-gray-800 active:scale-95 transition-transform duration-100">
       Submit
     </button>
@@ -196,33 +196,7 @@
     <p id="form-success" class="hidden mt-4 text-green-600 text-sm">Thank you! We'll be in touch soon.</p>
   </form>
 </div>
-</div>
-</section>
 
-<!-- JavaScript -->
-<script>
-  // Check if the file is opened via file:// and alert
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbw0ksXDzG3jLrApRuLO3Bt0AhBXvqPWdk1K0BXUCcgpb7ui3OBJT_W1iivGf0CUpiKs/exec';
-  const form = document.forms['submit-to-google-sheet'];
-  const successMsg = document.getElementById('form-success');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    // Add timestamp
-    document.getElementById('timestamp').value = new Date().toLocaleString('en-IN');
-
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        form.reset();
-        successMsg.classList.remove('hidden');
-      })
-      .catch(error => {
-        alert("Something went wrong while submitting the form. Try again later.");
-        console.error('Error!', error.message);
-      });
-  });
 </script>
 
 <footer class="bg-[#0f172a] text-white py-12 px-6">
@@ -263,6 +237,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
