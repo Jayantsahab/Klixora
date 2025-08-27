@@ -362,7 +362,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <h2>Get Your Free Digital Marketing Audit</h2>
               <p class="mb-4">Discover untapped opportunities to grow your business online</p>
               <form class="consultation-form">
-                <form id="audit-form" name="contact" method="POST" data-netlify="true" netlify>
+                <form id="audit-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"> 
+                  <!-- Required hidden input for Netlify -->
+                  <input type="hidden" name="form-name" value="contact" /> 
+                  <!-- Honeypot anti-spam --> <p class="hidden"> <label>Don’t fill this out: <input name="bot-field" />
+                  </label> </p>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <input type="text" class="form-control" placeholder="Your Name" required>
@@ -386,8 +390,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <option value="email">Email Marketing</option>
                     </select>
                   </div>
- <!-- Hidden Input to Activate Netlify Forms -->
-                         <input type="hidden" name="form-name" value="contact">
                   <div class="col-12">
                     <button type="submit" class="btn btn-primary">Get your Free Audit</button>
 
@@ -943,6 +945,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
+
 
 
 
