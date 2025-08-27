@@ -361,40 +361,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="consultation-content">
               <h2>Get Your Free Digital Marketing Audit</h2>
               <p class="mb-4">Discover untapped opportunities to grow your business online</p>
-                     <form id="audit-form" name="contact" method="POST" data-netlify="true" netlify >
-                              
-                  <div class="row g-3">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="tel" class="form-control" placeholder="Phone Number">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Website URL">
-                  </div>
-                  <div class="col-12">
-                    <select class="form-select" required>
-                      <option value="">Select Service Interest</option>
-                      <option value="seo">Search Engine Optimization (SEO)</option>
-                      <option value="ppc">Pay Per Click (PPC)</option>
-                      <option value="social">Social Media Marketing</option>
-                      <option value="content">Content Marketing</option>
-                      <option value="email">Email Marketing</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-<!-- Required hidden input for Netlify -->
-                  <input type="hidden" name="form-name" value="contact"> 
-                    <button type="submit" class="btn btn-primary">Get your Free Audit</button>
+                     <form id="audit-form" name="contact" method="POST" data-netlify="true" class="consultation-form">
+  <input type="hidden" name="form-name" value="contact"> 
 
-                  </div>
-                </div>
-              </form>
-            </div>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+    </div>
+    <div class="col-md-6">
+      <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="website" class="form-control" placeholder="Website URL">
+    </div>
+    <div class="col-12">
+      <select name="service" class="form-select" required>
+        <option value="">Select Service Interest</option>
+        <option value="seo">Search Engine Optimization (SEO)</option>
+        <option value="ppc">Pay Per Click (PPC)</option>
+        <option value="social">Social Media Marketing</option>
+        <option value="content">Content Marketing</option>
+        <option value="email">Email Marketing</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Get your Free Audit</button>
+    </div>
+  </div>
+</form>
+                    </div>
           </div>
         </div>
       </div>
@@ -943,6 +941,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
+
 
 
 
